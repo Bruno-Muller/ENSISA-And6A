@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" 
+        android:layout_width="fill_parent" 
+        android:layout_height="fill_parent" 
+        android:isScrollContainer="true" 
+        android:scrollbarAlwaysDrawVerticalTrack="true" 
+        android:scrollbarStyle="outsideInset" 
+        android:scrollbars="vertical">
+        
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_formation" />
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        
+        <Button
+            android:id="@+id/Info_1A"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="@string/info_1a"
+            android:textColor="#3DCD02" />
+        
+        <Button
+            android:id="@+id/Info_2A"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="@string/info_2a"
+            android:textColor="#3DCD02" />
+        
+		<Button
+		    android:id="@+id/Info_3A"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1"
+		    android:onClick="onClick"
+		    android:text="@string/info_3a"
+		    android:textColor="#3DCD02" />
+		
+		<Button
+		    android:id="@+id/MR_Info"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1"
+		    android:onClick="onClick"
+		    android:text="@string/info_mr"
+		    android:textColor="#3DCD02" />
+        
+    </LinearLayout>
+    
+        <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        
+        <Button
+            android:id="@+id/Auto_1A"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="@string/auto_1a"
+            android:textColor="#FB7C00" />
+        
+        <Button
+            android:id="@+id/Auto_2A"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="@string/auto_2a"
+            android:textColor="#FB7C00" />
+        
+        <Button
+            android:id="@+id/Auto_3a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="@string/auto_3a"
+            android:textColor="#FB7C00" />
+        
+        <Button
+            android:id="@+id/MR_Auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="@string/auto_mr"
+            android:textColor="#FB7C00" />
+        
+    </LinearLayout>
+    
+        <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+                      
+        <Button
+            android:id="@+id/Meca_1A"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="@string/meca_1a"
+            android:textColor="#CC2100" />
+        
+        <Button
+            android:id="@+id/Meca_2A"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="@string/meca_2a"
+            android:textColor="#CC2100" />
+        
+        <Button
+            android:id="@+id/Meca_3A"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="@string/meca_3a"
+            android:textColor="#CC2100" />
+        
+    </LinearLayout>
+
+        <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+            
+        <Button
+            android:id="@+id/Textile_1A"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="@string/textile_1a"
+            android:textColor="#0056DC" />
+        
+        <Button
+            android:id="@+id/Textile_2A"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="@string/textile_2a"
+            android:textColor="#0056DC" />
+        
+        <Button
+            android:id="@+id/Textile_3A"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="@string/textile_3a"
+            android:textColor="#0056DC" />
+            
+    </LinearLayout>
+        
+            <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+            
+        <Button
+            android:id="@+id/Sys_de_Prod_1A"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="@string/sys_de_prod_1a"
+            android:textColor="#FFD300" />
+        
+        <Button
+            android:id="@+id/Sys_de_Prod_2A"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="@string/sys_de_prod_2a"
+            android:textColor="#FFD300" />
+        
+        <Button
+            android:id="@+id/Sys_de_Prod_3A"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="@string/sys_de_prod_3a"
+            android:textColor="#FFD300" />
+            
+    </LinearLayout> 
+        
+        
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/L3_Meca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="@string/meca_l3"
+            android:textColor="#810078" />
+
+        <Button
+            android:id="@+id/M1_Meca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="@string/meca_m1"
+            android:textColor="#810078" />
+        
+        <Button
+            android:id="@+id/M2_Meca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="@string/meca_m3"
+            android:textColor="#810078" />
+        
+        <Button
+            android:id="@+id/MSF_Meca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="@string/meca_msf"
+            android:textColor="#810078" />
+            
+    </LinearLayout>
+
+</LinearLayout>
+</ScrollView>

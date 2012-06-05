@@ -1,0 +1,149 @@
+
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.TimeZone;
+
+import android.app.Activity;
+import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.util.Log;
+import android.view.View;
+import android.webkit.WebView;
+import android.widget.TextView;
+import android.widget.ImageView;
+import android.widget.Toast;
+
+public class EDTActivity extends Activity {
+
+	String imgSrc = "ensisa.pinade.org/img/%1/%2a/%3/img";
+
+	String ConfigClasse = "info";
+	int ConfigPromo = 1;
+	int ConfigWeek = 0;
+
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		Log.d("EDTActivity", "-- onCreate -- ");
+
+		TimeZone.setDefault(TimeZone.getTimeZone("Europe/London"));
+
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.edt);
+
+		SharedPreferences preferences = PreferenceManager
+				.getDefaultSharedPreferences(getBaseContext());
+		long _time = preferences.getLong("time", 0);
+		
+		// MAJ des options
+		this.ConfigClasse = preferences.getString("class1", "");
+		this.ConfigPromo = preferences.getInt("class2", 0);
+		this.ConfigWeek = weekBetween(_time);
+
+		// On charge l'image
+		this.loadImage();
+
+		Toast.makeText(
+				this,
+				"time: " + String.valueOf(_time) + " / "
+						+ String.valueOf(weekBetween(_time)),
+				Toast.LENGTH_SHORT).show();
+	}
+
+	public void imgNextClick(View view) {
+		this.ConfigWeek++;
+		this.loadImage();
+	}
+
+	public void imgPrevClick(View view) {
+		this.ConfigWeek--;
+		this.loadImage();
+	}
+
+	protected void loadImage() {
+		this.loadImage(this.ConfigClasse, this.ConfigPromo, this.ConfigWeek);
+	}
+
+	protected void loadImage(String Classe) {
+		this.loadImage(Classe, this.ConfigPromo, this.ConfigWeek);
+	}
+
+	protected void loadImage(int promo, int week) {
+		this.loadImage(this.ConfigClasse, promo, week);
+	}
+
+	protected void loadImage(String Classe, int promo, int week) {
+		// On transforme l'URL dynamiquement
+		String _imgSrc = this.imgSrc;
+		_imgSrc = _imgSrc.replaceAll("%1", Classe)
+				.replaceAll("%2", String.valueOf(this.ConfigPromo))
+				.replaceAll("%3", String.valueOf(this.ConfigWeek))
+				.replaceAll("//", "/").replaceAll("/0/", "/");
+
+		// On charge l'image
+		Log.d("EDTActivity", "-- IMG url = " + _imgSrc);
+		//this.downloadFile(R.id.edt_calendar, "http://" + _imgSrc);
+		
+		WebView myWebView = (WebView) findViewById(R.id.edt_calendar);
+		myWebView.loadUrl("http://" + _imgSrc);
+
+		// On change les `titres`
+		TextView textview1 = (TextView) findViewById(R.id.edt_header1);
+		textview1.setText(this.ConfigPromo + "A " + this.ConfigClasse);
+
+		TextView textview2 = (TextView) findViewById(R.id.edt_header2);
+		textview2.setText("Semaine " + this.ConfigWeek);
+	}
+
+	void downloadFile(int idElt, String fileUrl) {
+		Log.d("EDTActivity", "-- downloadFile --");
+
+		URL myFileUrl = null;
+		try {
+			myFileUrl = new URL(fileUrl);
+		} catch (MalformedURLException e) {
+			Log.e("EDTActivity", "DownloadFile URL", e);
+		}
+		try {
+			HttpURLConnection conn = (HttpURLConnection) myFileUrl
+					.openConnection();
+			conn.setDoInput(true);
+			conn.connect();
+			InputStream is = conn.getInputStream();
+
+			Bitmap bmImg = BitmapFactory.decodeStream(is);
+			Log.d("EDTActivity", fileUrl);
+
+			ImageView imgView = (ImageView) findViewById(idElt);
+			imgView.setImageBitmap(bmImg);
+			Log.d("EDTActivity", imgView.toString());
+
+		} catch (IOException e) {
+			Log.e("EDTActivity", "DownloadFile IMG", e);// e.printStackTrace();
+		}
+	}
+
+	static public int weekBetween(long time1) {
+		Calendar c1 = Calendar.getInstance();
+		c1.setTime(new Date(time1));
+		Calendar c2 = Calendar.getInstance();
+		c2.setTime(new Date());
+
+		Calendar date = (Calendar) c1.clone();
+		int daysBetween = 0;
+		while (date.before(c2)) {
+			date.add(Calendar.DAY_OF_MONTH, 1);
+			daysBetween++;
+		}
+
+		return daysBetween / 7;
+	}
+}

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:baselineAligned="false"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <!--
+        <TextView
+            android:id="@+id/edt_header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.61"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Large Text"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+        -->
+
+        <ImageView
+            android:id="@+id/edt_prev"
+            android:layout_width="34dp"
+            android:layout_height="fill_parent"
+            android:onClick="imgPrevClick"
+            android:contentDescription="@string/schedule_left_click"
+            android:src="@android:drawable/ic_media_rew" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.61"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/edt_header1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/promotion"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/edt_header2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/date"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/edt_next"
+            android:layout_width="34dp"
+            android:layout_height="fill_parent"
+            android:onClick="imgNextClick"
+            android:contentDescription="@string/schedule_right_click"
+            android:src="@android:drawable/ic_media_ff" />
+    </LinearLayout>
+
+    <WebView
+        android:id="@+id/edt_calendar"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="@string/schedule"
+        android:src="@android:drawable/ic_menu_today" />
+
+    <ViewSwitcher
+        android:id="@+id/viewSwitcher1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+    </ViewSwitcher>
+
+</LinearLayout>

@@ -1,0 +1,105 @@
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+import android.app.ListActivity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.Toast;
+
+public class ContactsActivity extends ListActivity {
+
+	@Override
+	public void onCreate(Bundle icicle) {
+		super.onCreate(icicle);
+		/*
+		 * String[] values = new String[] { "Android", "iPhone",
+		 * "WindowsMobile", "Blackberry", "WebOS", "Ubuntu", "Windows7",
+		 * "Max OS X", "Linux", "OS/2" }; /*ArrayAdapter<String> adapter = new
+		 * ArrayAdapter<String>(this, R.layout.contact_label,
+		 * R.id.contact_label, values);
+		 */
+		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+				R.layout.contacts_item, R.id.contact_label, this.getModel());
+		// ListView listView = (ListView) findViewById(R.id.contacts_list);
+		// listView.setAdapter(adapter);
+		setListAdapter(adapter);
+	}
+
+	protected List<String> getModel() {
+		List<String> list = new ArrayList<String>();
+
+		list.add("Olivarès Georges");
+		list.add("Muller Bruno");
+
+		return list;
+	}
+
+	@Override
+	protected void onListItemClick(ListView l, View v, int position, long id) {
+		String item = (String) getListAdapter().getItem(position);
+		Toast.makeText(this, item + " selected", Toast.LENGTH_LONG).show();
+	}
+	
+
+	/** @TODO A supprimer une fois les onglets mis en place*/
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+
+		// Création du menu inflater
+		MenuInflater inflater = getMenuInflater();
+
+		// On envoie a la variable menu le fichier xml parsé par l'inflater
+		inflater.inflate(R.layout.menu_items, menu);
+
+		return true;
+
+	}
+
+	/** @TODO A supprimer une fois les onglets mis en place*/
+	@Override
+	public boolean onMenuItemSelected(int featureId, MenuItem item) {
+		Intent monIntent;
+
+		// On récupère l'id de l'item et on le compare
+		switch (item.getItemId()) {
+
+		case R.id.itemEDT:
+			monIntent = new Intent(this, EDTActivity.class);
+			startActivity(monIntent);
+			return true;
+
+		case R.id.itemContactsList:
+			monIntent = new Intent(this, ContactsActivity.class);
+			startActivity(monIntent);
+			return true;
+
+		case R.id.itemOptions:
+			// On affiche un message
+			Toast.makeText(this, "Ouverture des options", Toast.LENGTH_SHORT)
+					.show();
+			return true;
+
+		case R.id.itemMentions:
+			monIntent = new Intent(this, MentionActivity.class);
+			startActivity(monIntent);
+			return true;
+
+		case R.id.itemQuitter:
+			// On ferme l'activité
+			finish();
+			return true;
+
+		}
+
+		return super.onMenuItemSelected(featureId, item);
+	}
+
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+<ImageView
+    android:id="@+id/splash_screen_image"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:contentDescription="@string/splash_screen_image_content_description"
+    android:src="@drawable/logo_v_1_1" />
+
+<ScrollView
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:scrollbars="vertical">
+
+<TextView
+    android:id="@+id/splash_screen_message"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:text="@string/splash_screen_message" />
+
+</ScrollView>
+</LinearLayout>

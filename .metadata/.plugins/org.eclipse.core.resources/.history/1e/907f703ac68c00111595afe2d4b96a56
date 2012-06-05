@@ -1,0 +1,23 @@
+
+
+import java.util.TimeZone;
+
+import android.app.Activity;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.util.Log;
+
+public class EDTOptionsActivity extends Activity {
+	public void onCreate(Bundle savedInstanceState) {
+		Log.d("EDTActivity", "-- onCreate -- ");
+
+		TimeZone.setDefault(TimeZone.getTimeZone("Europe/London"));
+
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.edt_options);
+
+		SharedPreferences preferences = PreferenceManager
+				.getDefaultSharedPreferences(getBaseContext());
+	}
+}

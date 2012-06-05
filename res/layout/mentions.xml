@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.88"
+        android:gravity="center"
+        android:text="@string/mentions"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.16" 
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/buttonIariss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/iariss" />
+
+        <Button
+            android:id="@+id/buttonUha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/uha" />
+
+        <Button
+            android:id="@+id/buttonEnsisa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ensisa" />
+
+        <Button
+            android:id="@+id/buttonTrombi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/trombi" />
+
+    </LinearLayout>
+
+</LinearLayout>

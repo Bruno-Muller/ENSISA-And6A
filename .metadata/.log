@@ -1,0 +1,48 @@
+!SESSION 2012-04-22 23:48:24.914 -----------------------------------------------
+eclipse.buildId=M20110909-1335
+java.version=1.6.0_29
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.java.product
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2012-04-22 23:50:39.179
+!MESSAGE Failed to load properties file for project 'Proj'
+
+!ENTRY org.eclipse.core.jobs 2 2 2012-04-22 23:51:59.542
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.m2e.core.internal.index.nexus.IndexUpdaterJob
+!SESSION 2012-04-25 19:39:35.538 -----------------------------------------------
+eclipse.buildId=M20110909-1335
+java.version=1.6.0_31
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -keyring /Users/bruno/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -data /Users/bruno/Dropbox/Java/And6a -product org.eclipse.epp.package.java.product -keyring /Users/bruno/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.resources 2 10035 2012-04-25 19:39:43.114
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.net 1 0 2012-04-25 19:39:46.240
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY com.android.ide.eclipse.ddms 4 0 2012-04-25 19:39:51.608
+!MESSAGE DDMS files not found: /Applications/Eclipse/Eclipse.app/Contents/MacOS/C:\Program Files (x86)\Android\android-sdk/platform-tools/adb /Applications/Eclipse/Eclipse.app/Contents/MacOS/C:\Program Files (x86)\Android\android-sdk/tools/hprof-conv /Applications/Eclipse/Eclipse.app/Contents/MacOS/C:\Program Files (x86)\Android\android-sdk/tools/traceview 
+
+!ENTRY org.eclipse.core.jobs 2 2 2012-04-25 19:44:43.569
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.m2e.core.internal.index.nexus.IndexUpdaterJob
+!SESSION 2012-04-25 19:45:38.998 -----------------------------------------------
+eclipse.buildId=M20110909-1335
+java.version=1.6.0_31
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -keyring /Users/bruno/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -data /Users/bruno/Dropbox/Java/And6a -product org.eclipse.epp.package.java.product -keyring /Users/bruno/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2012-04-25 19:45:44.350
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY com.android.ide.eclipse.ddms 4 0 2012-04-25 19:45:48.893
+!MESSAGE DDMS files not found: /Applications/Eclipse/Eclipse.app/Contents/MacOS/C:\Program Files (x86)\Android\android-sdk/platform-tools/adb /Applications/Eclipse/Eclipse.app/Contents/MacOS/C:\Program Files (x86)\Android\android-sdk/tools/hprof-conv /Applications/Eclipse/Eclipse.app/Contents/MacOS/C:\Program Files (x86)\Android\android-sdk/tools/traceview 
+
+!ENTRY org.eclipse.core.jobs 2 2 2012-04-25 19:46:26.110
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.m2e.core.internal.index.nexus.IndexUpdaterJob

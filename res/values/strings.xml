@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">And6@</string>
+    <string name="splash_screen_message">Bienvenue sur le Tombinoscope et l\'Emploi du temps de l\'ENSISA</string>
+    <string name="splash_screen_image_content_description">Logo And6@</string>
+    <string name="mentions">Ceci est une application créée par des élèves de 1ère année de l\'ENSISA, elle reste leur entière propriétée. Toutes les informations contenues dans cette application sont strictement confidentielles et ne doivent en aucun cas être divulguées et ne peuvent faire l\'objet d\'une ulisation sans l\'autorisation explicite du ou des utilisateur(s).</string>
+    <string name="iariss">Iariss</string>
+    <string name="uha">UHA</string>
+    <string name="ensisa">ENSISA</string>
+    <string name="trombi">Trombi</string>
+    <string name="choose_formation">Choisissez la formation voulue :</string>
+    <string name="info_1a">1A Info</string>
+    <string name="info_2a">2A Info</string>
+    <string name="info_3a">3A Info</string>
+    <string name="info_mr">MR Info</string>
+    <string name="auto_1a">1A Auto</string>
+    <string name="auto_2a">2A Auto</string>
+    <string name="auto_3a">3A Auto</string>
+    <string name="auto_mr">MR Auto</string>
+    <string name="meca_1a">1A Méca</string>
+    <string name="meca_2a">2A Méca</string>
+    <string name="meca_3a">3A Méca</string>
+    <string name="textile_1a">1A Textile</string>
+    <string name="textile_2a">2A Textile</string>
+    <string name="textile_3a">3A Textile</string>
+    <string name="sys_de_prod_1a">1A Sys de Prod</string>
+    <string name="sys_de_prod_2a">2A Sys de Prod</string>
+    <string name="sys_de_prod_3a">3A Sys de Prod</string>
+    <string name="meca_l3">L3 Méca</string>
+    <string name="meca_m1">M1 Méca</string>
+    <string name="meca_m3">M3 Méca</string>
+    <string name="meca_msf">MSF Méca</string>
+    <string name="avatar">Avatar</string>
+    <string name="name">Nom</string>
+    <string name="firstname">Prénom</string>
+    <string name="promotion">Promotion</string>
+    <string name="classe">Classe</string>
+    <string name="year">Année</string>
+    <string name="address">Adresse(s) :</string>
+    <string name="email">Email(s) :</string>
+    <string name="phone">Téléphone(s) :</string>
+    <string name="message">Message</string>
+    <string name="call">Appeler</string>
+    <string name="default_password">mot de passe</string>
+    <string name="default_login">identifiant</string>
+    <string name="login">Login</string>
+    <string name="login_advice">Connectez vous au serveur avec vos identifiants UHA (avec ou sans @uha.fr).</string>
+    <string name="login_warning">Service exclusivement reservé aux étudiants de l\'ENSISA (UHA Mulhouse).</string>
+    <string name="schedule">Schedule</string>
+    <string name="schedule_left_click">schedule_left_click</string>
+    <string name="schedule_right_click">schedule_right_click</string>
+    <string name="date">Date</string>
+
+</resources>

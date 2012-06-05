@@ -1,0 +1,75 @@
+
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.widget.Toast;
+
+public class MenuActivity extends Activity {
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.menu);
+	}
+	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+
+		// Création du menu inflater
+		MenuInflater inflater = getMenuInflater();
+		
+		menu.addIntentOptions(Menu.NONE, Menu.NONE, Menu.NONE, this.getComponentName(), null, null, Menu.NONE, null);
+
+		// On envoie a la variable menu le fichier xml parsé par l'inflater
+		inflater.inflate(R.layout.menu_items, menu);
+
+		return true;
+
+	}
+
+	@Override
+	public boolean onMenuItemSelected(int featureId, MenuItem item) {
+		Intent monIntent;
+
+		// On récupère l'id de l'item et on le compare
+		switch (item.getItemId()) {
+
+		case R.id.itemEDTOptions:
+			monIntent = new Intent(this, EDTOptionsActivity.class);
+			startActivity(monIntent);
+			return true;
+			
+		case R.id.itemEDT:
+			monIntent = new Intent(this, EDTActivity.class);
+			startActivity(monIntent);
+			return true;
+
+		case R.id.itemContactsList:
+			monIntent = new Intent(this, ContactsActivity.class);
+			startActivity(monIntent);
+			return true;
+
+		case R.id.itemOptions:
+			// On affiche un message
+			Toast.makeText(this, "Ouverture des options", Toast.LENGTH_SHORT)
+					.show();
+			return true;
+
+		case R.id.itemMentions:
+			monIntent = new Intent(this, MentionActivity.class);
+			startActivity(monIntent);
+			return true;
+
+		case R.id.itemQuitter:
+			// On ferme l'activité
+			finish();
+			return true;
+
+		}
+
+		return super.onMenuItemSelected(featureId, item);
+	}
+}
