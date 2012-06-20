@@ -39,7 +39,7 @@ public class SplashScreenActivity extends Activity {
 	}
 
 	public void setText(String text) {
-		((TextView)findViewById(R.id.splash_screen_message)).setText(text);
+		((TextView)findViewById(R.id.news)).setText(text);
 	}
 	
 	public void startTimer() {
@@ -88,7 +88,7 @@ public class SplashScreenActivity extends Activity {
 				text = stringBuffer.toString();
 
 			} catch (IOException e) {
-				Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
+				//Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
 				Log.e("And6@ - SplashScreenActivity", e.getMessage());
 			}
 

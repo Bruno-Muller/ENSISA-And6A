@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">And6@</string>
-    <string name="splash_screen_message">Bienvenue sur le Tombinoscope et l\'Emploi du temps de l\'ENSISA</string>
+    <string name="splash_screen_message">Bienvenue sur le Tombinoscope et l\'Emploi du temps de l\'ENSISA.</string>
     <string name="splash_screen_image_content_description">Logo And6@</string>
     <string name="mentions">Ceci est une application créée par des élèves de 1ère année de l\'ENSISA, elle reste leur entière propriétée. Toutes les informations contenues dans cette application sont strictement confidentielles et ne doivent en aucun cas être divulguées et ne peuvent faire l\'objet d\'une ulisation sans l\'autorisation explicite du ou des utilisateur(s).</string>
     <string name="iariss">Iariss</string>
@@ -44,7 +44,7 @@
     <string name="default_password">mot de passe</string>
     <string name="default_login">identifiant</string>
     <string name="login">Login</string>
-    <string name="login_advice">Connectez vous au serveur avec vos identifiants UHA (avec ou sans @uha.fr).</string>
+    <string name="login_advice">Connectez vous au serveur avec vos identifiants.</string> <!--  UHA (avec ou sans @uha.fr) -->
     <string name="login_warning">Service exclusivement reservé aux étudiants de l\'ENSISA (UHA Mulhouse).</string>
     <string name="schedule">Schedule</string>
     <string name="schedule_left_click">schedule_left_click</string>

@@ -10,20 +10,27 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
     android:contentDescription="@string/splash_screen_image_content_description"
     android:src="@drawable/logo_v_1_1" />
-
-<ScrollView
-android:layout_width="fill_parent"
-android:layout_height="wrap_content"
-android:scrollbars="vertical">
 
 <TextView
     android:id="@+id/splash_screen_message"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:gravity="center"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
     android:text="@string/splash_screen_message" />
 
-</ScrollView>
+<TextView
+    android:id="@+id/news"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:text="" />
+
 </LinearLayout>

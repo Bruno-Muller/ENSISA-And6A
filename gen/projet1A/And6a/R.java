@@ -16,8 +16,7 @@ public final class R {
     }
     public static final class drawable {
         public static final int avatar_default=0x7f020000;
-        public static final int ic_launcher=0x7f020001;
-        public static final int logo_v_1_1=0x7f020002;
+        public static final int logo_v_1_1=0x7f020001;
     }
     public static final class id {
         public static final int Auto_1A=0x7f050017;
@@ -61,6 +60,7 @@ public final class R {
         public static final int login=0x7f05000c;
         public static final int message=0x7f050003;
         public static final int name=0x7f050004;
+        public static final int news=0x7f050031;
         public static final int promo=0x7f050006;
         public static final int splash_screen_image=0x7f05002f;
         public static final int splash_screen_message=0x7f050030;
@@ -103,6 +103,8 @@ public final class R {
         public static final int info_mr=0x7f04000c;
         public static final int login=0x7f04002b;
         public static final int login_advice=0x7f04002c;
+        /**   UHA (avec ou sans @uha.fr) 
+         */
         public static final int login_warning=0x7f04002d;
         public static final int meca_1a=0x7f040011;
         public static final int meca_2a=0x7f040012;

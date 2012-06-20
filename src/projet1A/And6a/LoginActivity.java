@@ -1,5 +1,7 @@
 package projet1A.And6a;
 
+import java.net.URLEncoder;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -48,7 +50,7 @@ public class LoginActivity extends Activity
 			String passStr = pass.getText().toString();
 
 			if (!userStr.equals("") && !passStr.equals("")) 
-				this.tryToConnect(userStr, passStr);; // On essaye de se connecter
+				this.tryToConnect(userStr, URLEncoder.encode(passStr));; // On essaye de se connecter
 		}
 	}
 
